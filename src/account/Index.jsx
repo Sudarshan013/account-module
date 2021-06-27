@@ -30,7 +30,7 @@ export default function Index() {
       toggleDialog(!isDialogOpen)
     },
     download: (item) => {
-      const response = apiPost(`${BASE_URL}/downloadReport`, {
+      const response = apiPost(`${BASE_URL}/sendEmail`, {
         customer_id: item.customer_id
       })
       if (response) {
