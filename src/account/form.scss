@@ -1,3 +1,10 @@
 .transaction-dialog{
   width: calc(100vw - 200px);
+  height: calc(100vh - 400px);
+  overflow-y: auto;
+}
+.add-sales-dialog{
+  .dialog-body{
+    padding: 30px;
+  }
 }

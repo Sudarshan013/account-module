@@ -1,4 +1,4 @@
-import { Card } from '@blueprintjs/core'
+import { Card, Tag } from '@blueprintjs/core'
 import React, { memo } from 'react'
 import styled from 'styled-components'
 
@@ -9,6 +9,9 @@ const Container = styled.div`
   }
   p{
     color: #474747;
+    .bp3-tag{
+      font-size: 15px;
+    }
   }
   .bal{
     display: flex;
@@ -31,9 +34,17 @@ export default memo(function TransactionCard({
     <Card>
       <Container>
         <h3>{created_at} - {label}</h3>
-        <p>Credit: {credit_amount}</p>
-        <div className="bal">
-          <p>Balance: {balance}</p>
+        <p>
+          <Tag className="mt-10" intent="warning" minimal>
+            Credit: {credit_amount}
+          </Tag>
+        </p>
+        <div>
+          <p>
+            <Tag intent="primary">
+              Balance: {balance}
+            </Tag>
+          </p>
         </div>
       </Container>
     </Card>
